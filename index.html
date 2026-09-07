@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif:ital@1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:ital@1&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" href="./favicon.ico"/>
+    <link rel="icon" href="./favicon.ico" />
   </head>
 
   <body>
@@ -64,9 +64,113 @@
     </header>
 
     <main class="content">
-      <section id="reservation"></section>
+      <section class="reservation" id="reservation">
+        <h2 class="reservation__title">Reservar una mesa</h2>
+
+        <form class="form">
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="name">Nombre *</label>
+            <input
+              class="form__input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nombre"
+              required
+            />
+
+            <label class="form__label" for="guests"
+              >Número de comensales *</label
+            >
+            <input
+              class="form__input"
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+              max="8"
+              placeholder="1-8"
+              required
+            />
+
+            <label class="form__label" for="datetime">Fecha y hora *</label>
+            <input
+              class="form__input"
+              type="datetime-local"
+              id="datetime"
+              name="datetime"
+              required
+            />
+
+            <label class="form__label" for="email"
+              >Tu correo electrónico *</label
+            >
+            <input
+              class="form__input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@email.com"
+              required
+            />
+
+            <button class="form__button" type="submit">
+              Reservar una mesa
+            </button>
+
+            <label class="form__label form__label_type_checkbox">
+              <input
+                class="form__checkbox"
+                type="checkbox"
+                name="terms"
+                required
+              />
+              Acepto los términos de uso
+            </label>
+          </fieldset>
+        </form>
+      </section>
     </main>
 
-    <footer class="footer" id="footer"></footer>
+    <footer class="footer" id="footer">
+      <div class="footer__circle"></div>
+
+      <div class="footer__content">
+        <img
+          class="footer__logo"
+          src="./images/logo_coffeeshop_light.svg"
+          alt="Logo de Triple Espresso"
+        />
+
+        <div class="footer__social">
+          <h3 class="footer__social-heading">Redes sociales</h3>
+
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  class="footer__social-icon"
+                  src="./images/facebook_white.svg"
+                  alt="Facebook"
+                />
+                Facebook
+              </a>
+            </li>
+
+            <li class="footer__list-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  class="footer__social-icon"
+                  src="./images/instagram_white.svg"
+                  alt="Instagram"
+                />
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copyright">© 2026 Tatiana Agudelo</p>
+    </footer>
   </body>
 </html>
